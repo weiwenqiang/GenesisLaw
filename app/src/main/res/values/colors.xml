@@ -1,6 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
+    <!-- 系统使用 -->
+    <color name="colorPrimary">#34253A</color>
+    <color name="colorPrimaryDark">#45364b</color>
     <color name="colorAccent">#FF4081</color>
+    <!-- 纯色 -->
+    <color name="white">#ffffffff</color>
+    <color name="black">#ff000000</color>
+    <!-- 灰色 -->
+    <color name="gray1">#cccccc</color>
+    <color name="gray2">#888888</color>
+    <color name="gray3">#444444</color>
+    <!-- 自定义颜色 -->
+    <color name="blue">#ff14B9C7</color>
+    <color name="purple">#ff34253A</color>
+    <color name="yellow">#ffF5A623</color>
+    <color name="red">#ffe8380c</color>
+    <!-- 功能性颜色 -->
+    <color name="grayline">#CDCDCD</color>
 </resources>

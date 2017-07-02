@@ -2,7 +2,14 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/BGARefresh/BGARefresh.iml" filepath="$PROJECT_DIR$/BGARefresh/BGARefresh.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Calendar/Calendar.iml" filepath="$PROJECT_DIR$/Calendar/Calendar.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DialogUI/DialogUI.iml" filepath="$PROJECT_DIR$/DialogUI/DialogUI.iml" />
       <module fileurl="file://$PROJECT_DIR$/GenesisLaw.iml" filepath="$PROJECT_DIR$/GenesisLaw.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PagerIndicator/PagerIndicator.iml" filepath="$PROJECT_DIR$/PagerIndicator/PagerIndicator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SweetAlert/SweetAlert.iml" filepath="$PROJECT_DIR$/SweetAlert/SweetAlert.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Twinkling/Twinkling.iml" filepath="$PROJECT_DIR$/Twinkling/Twinkling.iml" />
+      <module fileurl="file://$PROJECT_DIR$/XUtils/XUtils.iml" filepath="$PROJECT_DIR$/XUtils/XUtils.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

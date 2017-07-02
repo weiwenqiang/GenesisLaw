@@ -9,14 +9,38 @@ android {
         targetSdkVersion 25
         versionCode 1
         versionName "1.0"
+        multiDexEnabled true
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
         release {
+            // 不显示Log
+//            buildConfigField "boolean", "LOG_DEBUG", "false"
+            //混淆
             minifyEnabled false
+            //Zipalign优化
+            zipAlignEnabled false
+            // 移除无用的resource文件
+            shrinkResources false
+            //前一部分代表系统默认的android程序的混淆文件，该文件已经包含了基本的混淆声明，后一个文件是自己的定义混淆文件
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    repositories {
+        flatDir {
+            dirs 'libs' //就是你放aar的目录地址
+        }
+    }
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+    //执行lint检查，有任何的错误或者警告提示，都会终止构建，我们可以将其关掉。
+    lintOptions {
+        abortOnError false
+    }
+    useLibrary 'org.apache.http.legacy'
 }
 
 dependencies {
@@ -24,7 +48,63 @@ dependencies {
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
+    compile 'com.android.support:support-v4:25.3.1'
     compile 'com.android.support:appcompat-v7:25.3.1'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
     testCompile 'junit:junit:4.12'
+
+    //XUtils3
+    compile project(':XUtils')
+    //刷新加载
+    compile project(':BGARefresh')
+    compile 'cn.bingoogolapple:bga-adapter:1.1.8'
+    compile 'cn.bingoogolapple:bga-swipeitemlayout:1.0.4'
+    compile project(':Twinkling')
+    //对话框
+    compile project(':DialogUI')
+    compile project(':SweetAlert')
+    //日期控件
+    compile project(':Calendar')
+    //滑动页面
+    compile project(':PagerIndicator')
+    // Retrofit
+    compile files('libs/retrofit-2.2.0.jar')
+    compile files('libs/converter-gson-2.2.0.jar')
+    compile files('libs/converter-scalars-2.2.0.jar')
+    compile files('libs/adapter-rxjava-2.2.0.jar')
+    // dagger
+    compile files('libs/dagger-1.2.5.jar')
+    // RxJava
+    compile 'io.reactivex:rxandroid:1.2.1'
+    compile 'io.reactivex:rxjava:1.2.9'
+    // Butterknife
+    compile 'com.jakewharton:butterknife:8.5.1'
+    compile 'com.jakewharton:butterknife-compiler:8.5.1'
+    // Gson
+    compile files('libs/gson-2.8.0.jar')
+    // OkHttp
+    compile files('libs/okhttp-3.6.0.jar')
+    compile files('libs/okio-1.11.0.jar')
+    compile files('libs/logging-interceptor-3.6.0.jar')
+    //java核心包
+    compile files('libs/commons-codec-1.10.jar')
+    compile files('libs/commons-lang-2.6.jar')
+    compile files('libs/javax.servlet-api-3.1.0.jar')
+    //Eventbus
+    compile 'org.greenrobot:eventbus:3.0.0'
+    //Leakcanary
+    debugCompile 'com.squareup.leakcanary:leakcanary-android:1.5.1'
+    releaseCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.1'
+    //方法超限
+    compile 'com.android.support:multidex:1.0.1'
+    //自定义字体
+    compile 'uk.co.chrisjenx:calligraphy:2.2.0'
+    //极光
+    compile files('libs/jcore-android_v1.1.1.jar')
+    compile files('libs/jpush-android_v3.0.3.jar')
+    compile files('libs/jsms_android-1.1.0.jar')
+    //分享
+    compile files('libs/Msc.jar')
+    compile files('libs/AMap3DMap_5.2.0_AMapNavi_5.1.0_20170602.jar')
+    compile files('libs/AMap_Location_V3.4.0_20170427.jar')
 }

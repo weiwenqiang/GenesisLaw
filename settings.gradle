@@ -1,1 +1,1 @@
-include ':app'
+include ':app', ':BGARefresh', ':XUtils', ':DialogUI', ':Calendar', ':PagerIndicator', ':SweetAlert', ':Twinkling'

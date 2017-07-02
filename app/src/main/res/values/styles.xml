@@ -3,9 +3,22 @@
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+
+        <item name="android:windowNoTitle">true</item> <!-- 设置无标题 -->
+        <!--<item name="android:windowFullscreen">?android:windowNoTitle</item>-->
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <!-- toolbar（actionbar）颜色 -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <!-- 状态栏颜色 -->
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <!-- 窗口的背景颜色 -->
+        <item name="android:windowBackground">@color/white</item>
+        <!-- 弹出设置框文字颜色 -->
+        <item name="android:textColorPrimary">@color/black</item>
+        <!-- toolbar 图标颜色 ! 注意:影响多选框颜色 -->
+        <item name="android:textColorSecondary">@color/black</item>
     </style>
 
 </resources>
